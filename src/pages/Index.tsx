@@ -179,7 +179,7 @@ const Index = () => {
           </p>
           <div className="space-y-4 max-w-[680px]">
             <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
-              <a href="mailto:joycemalik14@gmail.com" className="text-primary hover:underline font-medium">
+              <a href="mailto:23f2001747@ds.study.iitm.ac.in" className="text-primary hover:underline font-medium">
                 joycemalik14@gmail.com
               </a>
             </div>
