@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ClinicalCaseStudy = () => {
   return (
     <div className="min-h-screen bg-background font-sans antialiased">
@@ -5,9 +7,9 @@ const ClinicalCaseStudy = () => {
       <nav className="sticky top-0 bg-background/80 backdrop-blur-sm border-b border-border z-50">
         <div className="max-w-[800px] mx-auto px-8 py-5">
           <div className="flex items-center gap-8 text-sm">
-            <a href="/" className="font-serif font-semibold text-xl text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="font-serif font-semibold text-xl text-foreground hover:text-primary transition-colors">
               Avyukt
-            </a>
+            </Link>
             <a href="/#about" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 About
@@ -47,9 +49,9 @@ const ClinicalCaseStudy = () => {
         {/* Article Header */}
         <article className="prose prose-slate dark:prose-invert max-w-none">
           <div className="mb-8">
-            <a href="/#publications" className="text-sm text-primary hover:underline mb-4 inline-block">
+            <Link to="/#publications" className="text-sm text-primary hover:underline mb-4 inline-block">
               ← Back to Publications
-            </a>
+            </Link>
           </div>
 
           <h1 className="font-serif text-5xl font-bold mb-6 leading-tight tracking-tight">
@@ -274,9 +276,9 @@ const ClinicalCaseStudy = () => {
 
           {/* Back to Top */}
           <div className="mt-16 pt-8 border-t border-border">
-            <a href="/#publications" className="text-primary hover:underline">
+            <Link to="/#publications" className="text-primary hover:underline">
               ← Back to Publications
-            </a>
+            </Link>
           </div>
         </article>
       </main>

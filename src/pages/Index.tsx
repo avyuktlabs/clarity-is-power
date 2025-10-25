@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background font-sans antialiased">
@@ -5,9 +7,9 @@ const Index = () => {
       <nav className="sticky top-0 bg-background/80 backdrop-blur-sm border-b border-border z-50">
         <div className="max-w-[800px] mx-auto px-8 py-5">
           <div className="flex items-center gap-8 text-sm">
-            <a href="#" className="font-serif font-semibold text-xl text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="font-serif font-semibold text-xl text-foreground hover:text-primary transition-colors">
               Avyukt
-            </a>
+            </Link>
             <a href="#about" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 About
@@ -153,9 +155,9 @@ const Index = () => {
                 <div className="h-px flex-1 bg-border"></div>
               </div>
               <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-primary transition-colors">
-                <a href="/clinical-case-study" className="hover:underline">
+                <Link to="/clinical-case-study" className="hover:underline">
                   A Critical Case Study of Interpretability in Clinical Systems
-                </a>
+                </Link>
               </h3>
               <p className="text-base leading-relaxed text-muted-foreground">
                 An analysis examining the practical limitations of current interpretability methods when applied 
