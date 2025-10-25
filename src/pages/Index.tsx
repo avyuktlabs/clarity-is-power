@@ -167,24 +167,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* People */}
-        <section id="people" className="py-20 border-t border-border">
-          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
-            People
-          </h2>
-          <p className="text-lg leading-relaxed mb-12 text-foreground/90 max-w-[680px]">
-            Avyukt is a student-run research collective.
-          </p>
-          <div className="grid gap-6 max-w-[680px]">
-            <div className="border-l-2 border-primary pl-6 py-2">
-              <p className="text-lg font-medium">Joyce Malik</p>
-            </div>  
-            <div className="border-l-2 border-primary pl-6 py-2">
-              <p className="text-lg font-medium">Afreen</p>
-            </div>
-          </div>
-        </section>
-
+        
         {/* Contact */}
         <section id="contact" className="py-20 border-t border-border mb-32">
           <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
@@ -200,11 +183,7 @@ const Index = () => {
                 joycemalik14@gmail.com
               </a>
             </div>
-            <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
-              <a href="mailto:afreenhossain0000@gmail.com" className="text-primary hover:underline font-medium">
-                afreenhossain0000@gmail.com
-              </a>
-            </div>
+            
           </div>
         </section>
       </main>
