@@ -5,23 +5,38 @@ const Index = () => {
       <nav className="sticky top-0 bg-background/80 backdrop-blur-sm border-b border-border z-50">
         <div className="max-w-[800px] mx-auto px-8 py-5">
           <div className="flex items-center gap-8 text-sm">
-            <a href="#" className="font-serif font-semibold text-lg text-foreground hover:text-primary transition-colors">
+            <a href="#" className="font-serif font-semibold text-xl text-foreground hover:text-primary transition-colors">
               Avyukt
             </a>
-            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-              About
+            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors relative group">
+              <span className="relative">
+                About
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </a>
-            <a href="#research" className="text-muted-foreground hover:text-primary transition-colors">
-              Research
+            <a href="#research" className="text-muted-foreground hover:text-primary transition-colors relative group">
+              <span className="relative">
+                Research
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </a>
-            <a href="#publications" className="text-muted-foreground hover:text-primary transition-colors">
-              Publications
+            <a href="#publications" className="text-muted-foreground hover:text-primary transition-colors relative group">
+              <span className="relative">
+                Publications
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </a>
-            <a href="#people" className="text-muted-foreground hover:text-primary transition-colors">
-              People
+            <a href="#people" className="text-muted-foreground hover:text-primary transition-colors relative group">
+              <span className="relative">
+                People
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-              Contact
+            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors relative group">
+              <span className="relative">
+                Contact
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </a>
           </div>
         </div>
@@ -30,10 +45,20 @@ const Index = () => {
       {/* Main Content */}
       <main className="max-w-[800px] mx-auto px-8">
         {/* Hero */}
-        <section className="pt-32 pb-24">
-          <h1 className="font-serif text-6xl font-bold mb-10 leading-[1.1] tracking-tight">
+        <section className="pt-32 pb-24 relative">
+          {/* Geometric accent background */}
+          <div className="absolute top-24 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute top-32 left-0 w-48 h-48 bg-accent/30 rounded-full blur-2xl -z-10"></div>
+          
+          {/* Accent line decoration */}
+          <div className="absolute left-0 top-28 w-16 h-1 bg-gradient-to-r from-primary to-transparent mb-8"></div>
+          
+          <h1 className="font-serif text-7xl font-bold mb-4 leading-[1.1] tracking-tight">
             Avyukt
           </h1>
+          <p className="text-lg italic text-muted-foreground mb-10 font-light tracking-wide">
+            Making the invisible, visible
+          </p>
           <p className="text-2xl leading-relaxed mb-8 text-foreground/90 max-w-[680px]">
             A student-run research collective investigating AI interpretability for high-stakes systems.
           </p>
@@ -128,7 +153,7 @@ const Index = () => {
                 <div className="h-px flex-1 bg-border"></div>
               </div>
               <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-primary transition-colors">
-                <a href="#" className="hover:underline">
+                <a href="/clinical-case-study" className="hover:underline">
                   A Critical Case Study of Interpretability in Clinical Systems
                 </a>
               </h3>
@@ -151,10 +176,7 @@ const Index = () => {
           <div className="grid gap-6 max-w-[680px]">
             <div className="border-l-2 border-primary pl-6 py-2">
               <p className="text-lg font-medium">Joyce Malik</p>
-            </div>
-            <div className="border-l-2 border-primary pl-6 py-2">
-              <p className="text-lg font-medium">V.L. Rishank</p>
-            </div>
+            </div>  
             <div className="border-l-2 border-primary pl-6 py-2">
               <p className="text-lg font-medium">Afreen</p>
             </div>
@@ -177,13 +199,8 @@ const Index = () => {
               </a>
             </div>
             <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
-              <a href="mailto:vlvrishank@gmail.com" className="text-primary hover:underline font-medium">
-                vlvrishank@gmail.com
-              </a>
-            </div>
-            <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
-              <a href="mailto:afreen@gmail.com" className="text-primary hover:underline font-medium">
-                afreen@gmail.com
+              <a href="mailto:afreenhossain0000@gmail.com" className="text-primary hover:underline font-medium">
+                afreenhossain0000@gmail.com
               </a>
             </div>
           </div>
