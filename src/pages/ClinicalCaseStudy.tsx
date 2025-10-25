@@ -63,7 +63,7 @@ const ClinicalCaseStudy = () => {
           </h3>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground mb-12 pb-8 border-b border-border">
-            <time>September 2025</time>
+            <time>22 August 2025</time>
           </div>
 
           {/* Abstract */}

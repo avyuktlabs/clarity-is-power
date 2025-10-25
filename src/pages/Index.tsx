@@ -150,7 +150,7 @@ const Index = () => {
             <article className="group">
               <div className="flex items-baseline gap-4 mb-3">
                 <time className="text-sm font-mono text-muted-foreground tracking-wide">
-                  Sep 2025
+                  Aug 2025
                 </time>
                 <div className="h-px flex-1 bg-border"></div>
               </div>
