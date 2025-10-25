@@ -1,23 +1,26 @@
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background font-sans">
+    <div className="min-h-screen bg-background font-sans antialiased">
       {/* Navigation */}
-      <nav className="border-b border-border">
-        <div className="max-w-[750px] mx-auto px-6 py-6">
-          <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="font-serif font-semibold text-base text-foreground hover:no-underline">
+      <nav className="sticky top-0 bg-background/80 backdrop-blur-sm border-b border-border z-50">
+        <div className="max-w-[800px] mx-auto px-8 py-5">
+          <div className="flex items-center gap-8 text-sm">
+            <a href="#" className="font-serif font-semibold text-lg text-foreground hover:text-primary transition-colors">
               Avyukt
             </a>
-            <a href="#about" className="text-primary hover:underline">
+            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
               About
             </a>
-            <a href="#research" className="text-primary hover:underline">
+            <a href="#research" className="text-muted-foreground hover:text-primary transition-colors">
               Research
             </a>
-            <a href="#people" className="text-primary hover:underline">
+            <a href="#publications" className="text-muted-foreground hover:text-primary transition-colors">
+              Publications
+            </a>
+            <a href="#people" className="text-muted-foreground hover:text-primary transition-colors">
               People
             </a>
-            <a href="#contact" className="text-primary hover:underline">
+            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </a>
           </div>
@@ -25,35 +28,35 @@ const Index = () => {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-[750px] mx-auto px-6">
+      <main className="max-w-[800px] mx-auto px-8">
         {/* Hero */}
-        <section className="pt-24 pb-16">
-          <h1 className="font-serif text-5xl font-semibold mb-8 leading-tight">
+        <section className="pt-32 pb-24">
+          <h1 className="font-serif text-6xl font-bold mb-10 leading-[1.1] tracking-tight">
             Avyukt
           </h1>
-          <p className="text-xl leading-relaxed mb-6">
+          <p className="text-2xl leading-relaxed mb-8 text-foreground/90 max-w-[680px]">
             A student-run research collective investigating AI interpretability for high-stakes systems.
           </p>
-          <p className="text-muted-foreground">
-            Est. 2025, Bangalore
+          <p className="text-sm text-muted-foreground tracking-wide uppercase">
+            Est. 15 Aug 2025 • Bangalore
           </p>
         </section>
 
         {/* Mission */}
-        <section id="about" className="py-16 border-t border-border">
-          <h2 className="font-serif text-3xl font-semibold mb-12">
+        <section id="about" className="py-20 border-t border-border">
+          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
             Our Mission
           </h2>
-          <div className="space-y-6 text-base leading-relaxed">
-            <p>
+          <div className="space-y-8 text-lg leading-relaxed max-w-[680px]">
+            <p className="text-foreground/90">
               We are focused on a single critical problem: AI models are "black boxes."
             </p>
-            <p>
+            <p className="text-foreground/90">
               This lack of transparency is unacceptable in high-stakes environments like emergency medicine, 
               where a model's error can have irreversible consequences.
             </p>
-            <p>
-              Our mission is to conduct foundational research into <em>why</em> models make the decisions they do. 
+            <p className="text-foreground/90">
+              Our mission is to conduct foundational research into <em className="font-serif">why</em> models make the decisions they do. 
               We aim to move from "AI that works" to "AI that is understood," developing methods to make systems 
               auditable, reliable, and trustworthy under pressure.
             </p>
@@ -61,95 +64,140 @@ const Index = () => {
         </section>
 
         {/* Research */}
-        <section id="research" className="py-16 border-t border-border">
-          <h2 className="font-serif text-3xl font-semibold mb-12">
+        <section id="research" className="py-20 border-t border-border">
+          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
             Research Agenda
           </h2>
-          <div className="space-y-12">
-            <p className="text-base leading-relaxed">
+          <div className="space-y-16 max-w-[680px]">
+            <p className="text-lg leading-relaxed text-foreground/90">
               Our work is not about building new models, but dissecting existing ones. We are currently focused 
               on two primary lines of inquiry:
             </p>
 
             {/* Research Area 1 */}
-            <div>
-              <h3 className="font-serif text-xl font-semibold mb-4">
+            <div className="bg-accent/30 border-l-4 border-primary p-8 rounded-r">
+              <h3 className="font-serif text-2xl font-semibold mb-6 text-foreground">
                 1. Mechanistic Interpretability in Critical Contexts
               </h3>
-              <div className="space-y-4 text-base leading-relaxed">
-                <p>
+              <div className="space-y-6 text-base leading-relaxed">
+                <p className="text-foreground/90">
                   We use techniques like causal tracing and feature attribution to identify the exact internal 
                   mechanisms a model uses to process high-stakes data.
                 </p>
-                <p className="pl-6 border-l-2 border-muted italic">
-                  <strong>Key Question:</strong> Can we pinpoint the specific "circuit" within a model that 
-                  activates when processing an emergency triage report?
-                </p>
+                <div className="bg-background/50 p-6 rounded border border-border">
+                  <p className="italic text-foreground/80">
+                    <strong className="font-semibold text-foreground">Key Question:</strong> Can we pinpoint the specific "circuit" within a model that 
+                    activates when processing an emergency triage report?
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Research Area 2 */}
-            <div>
-              <h3 className="font-serif text-xl font-semibold mb-4">
+            <div className="bg-accent/30 border-l-4 border-primary p-8 rounded-r">
+              <h3 className="font-serif text-2xl font-semibold mb-6 text-foreground">
                 2. Failure Mode Characterization
               </h3>
-              <div className="space-y-4 text-base leading-relaxed">
-                <p>
+              <div className="space-y-6 text-base leading-relaxed">
+                <p className="text-foreground/90">
                   We analyze how and why models fail when given the noisy, incomplete, and high-stress data 
                   typical of emergency scenarios.
                 </p>
-                <p className="pl-6 border-l-2 border-muted italic">
-                  <strong>Key Question:</strong> Do models develop predictable, systemic biases when data is sparse, 
-                  and can we detect these failure modes before they occur in a live environment?
-                </p>
+                <div className="bg-background/50 p-6 rounded border border-border">
+                  <p className="italic text-foreground/80">
+                    <strong className="font-semibold text-foreground">Key Question:</strong> Do models develop predictable, systemic biases when data is sparse, 
+                    and can we detect these failure modes before they occur in a live environment?
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
+        {/* Publications */}
+        <section id="publications" className="py-20 border-t border-border">
+          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
+            Publications & Notes
+          </h2>
+          <div className="space-y-8 max-w-[680px]">
+            <article className="group">
+              <div className="flex items-baseline gap-4 mb-3">
+                <time className="text-sm font-mono text-muted-foreground tracking-wide">
+                  Sep 2025
+                </time>
+                <div className="h-px flex-1 bg-border"></div>
+              </div>
+              <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-primary transition-colors">
+                <a href="#" className="hover:underline">
+                  A Critical Case Study of Interpretability in Clinical Systems
+                </a>
+              </h3>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                An analysis examining the practical limitations of current interpretability methods when applied 
+                to medical decision support systems, with focus on emergency triage scenarios.
+              </p>
+            </article>
+          </div>
+        </section>
+
         {/* People */}
-        <section id="people" className="py-16 border-t border-border">
-          <h2 className="font-serif text-3xl font-semibold mb-12">
+        <section id="people" className="py-20 border-t border-border">
+          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
             People
           </h2>
-          <p className="text-base leading-relaxed mb-8">
+          <p className="text-lg leading-relaxed mb-12 text-foreground/90 max-w-[680px]">
             Avyukt is a student-run research collective.
           </p>
-          <div className="space-y-2 text-base">
-            <p>Joyce Malik</p>
-            <p>V.L. Rishank</p>
-            <p>Afreen</p>
+          <div className="grid gap-6 max-w-[680px]">
+            <div className="border-l-2 border-primary pl-6 py-2">
+              <p className="text-lg font-medium">Joyce Malik</p>
+            </div>
+            <div className="border-l-2 border-primary pl-6 py-2">
+              <p className="text-lg font-medium">V.L. Rishank</p>
+            </div>
+            <div className="border-l-2 border-primary pl-6 py-2">
+              <p className="text-lg font-medium">Afreen</p>
+            </div>
           </div>
         </section>
 
         {/* Contact */}
-        <section id="contact" className="py-16 border-t border-border mb-24">
-          <h2 className="font-serif text-3xl font-semibold mb-12">
+        <section id="contact" className="py-20 border-t border-border mb-32">
+          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
             Contact
           </h2>
-          <p className="text-base leading-relaxed mb-8">
+          <p className="text-lg leading-relaxed mb-12 text-foreground/90 max-w-[680px]">
             We are actively seeking to collaborate with fellow researchers and domain experts in medicine 
             and critical systems.
           </p>
-          <div className="space-y-2 text-base">
-            <p>
-              <a href="mailto:joycemalik14@gmail.com" className="text-primary hover:underline">
+          <div className="space-y-4 max-w-[680px]">
+            <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
+              <a href="mailto:joycemalik14@gmail.com" className="text-primary hover:underline font-medium">
                 joycemalik14@gmail.com
               </a>
-            </p>
-            <p>
-              <a href="mailto:vlvrishank@gmail.com" className="text-primary hover:underline">
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
+              <a href="mailto:vlvrishank@gmail.com" className="text-primary hover:underline font-medium">
                 vlvrishank@gmail.com
               </a>
-            </p>
-            <p>
-              <a href="mailto:afreen@gmail.com" className="text-primary hover:underline">
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
+              <a href="mailto:afreen@gmail.com" className="text-primary hover:underline font-medium">
                 afreen@gmail.com
               </a>
-            </p>
+            </div>
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-border py-12">
+        <div className="max-w-[800px] mx-auto px-8">
+          <p className="text-sm text-muted-foreground">
+            © 2025 Avyukt Research Collective
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
