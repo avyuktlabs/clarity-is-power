@@ -36,12 +36,6 @@ const ClinicalCaseStudy = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </span>
             </a>
-            <a href="/#people" className="text-muted-foreground hover:text-primary transition-colors relative group">
-              <span className="relative">
-                People
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </a>
             <a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 Contact
@@ -72,6 +66,8 @@ const ClinicalCaseStudy = () => {
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground mb-12 pb-8 border-b border-border">
             <time>22 August 2025</time>
+            <span>•</span>
+            <span>Mansa Hospital</span>
           </div>
 
           {/* Abstract */}

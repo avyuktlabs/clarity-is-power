@@ -28,12 +28,6 @@ const Index = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </span>
             </a>
-            <a href="#people" className="text-muted-foreground hover:text-primary transition-colors relative group">
-              <span className="relative">
-                People
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </a>
             <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 Contact
@@ -177,13 +171,15 @@ const Index = () => {
             We are actively seeking to collaborate with fellow researchers and domain experts in medicine 
             and critical systems.
           </p>
-          <div className="space-y-4 max-w-[680px]">
-            <div className="flex items-center gap-4 p-4 bg-accent/20 rounded border border-border hover:border-primary transition-colors">
-              <a href="mailto:23f2001747@ds.study.iitm.ac.in" className="text-primary hover:underline font-medium">
-                joycemalik14@gmail.com
+          <div className="space-y-6 max-w-[680px]">
+            <p className="text-lg text-foreground/90">
+              Please reach out at:
+            </p>
+            <div className="flex items-center gap-4 p-6 bg-accent/20 rounded-lg border border-border hover:border-primary transition-colors">
+              <a href="mailto:23f2001747@ds.study.iitm.ac.in" className="text-xl text-primary hover:underline font-medium">
+                23f2001747@ds.study.iitm.ac.in
               </a>
             </div>
-            
           </div>
         </section>
       </main>
