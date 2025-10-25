@@ -1,4 +1,12 @@
 import { Link } from "react-router-dom";
+import { 
+  TimelineFigure, 
+  CalibrationFigure, 
+  AlertBurdenFigure, 
+  PrecisionRecallFigure, 
+  ThresholdDecompositionFigure, 
+  ProtocolCoverageFigure 
+} from "@/components/ClinicalFigures";
 
 const ClinicalCaseStudy = () => {
   return (
@@ -112,6 +120,8 @@ const ClinicalCaseStudy = () => {
             <div className="mt-6 bg-primary/10 p-6 rounded border-l-4 border-primary">
               <p className="text-foreground font-medium"><strong>Index Observation:</strong> The earliest model‑positive state occurred at <strong>T+18</strong>; the first acknowledgment was at <strong>T+37</strong>—a <strong>12‑minute gap</strong> attributable to operational factors (queueing, device states) and limited interpretability at the point of care.</p>
             </div>
+            
+            <TimelineFigure />
           </section>
 
           <hr className="my-12 border-border" />
@@ -138,6 +148,8 @@ const ClinicalCaseStudy = () => {
                 <strong>Observability:</strong> Weekly PPV/sensitivity and <strong>alerts per 100 patient‑hours</strong>, visible to quality teams; no real‑time <strong>calibration curve</strong> or workload indicator for frontline staff.
               </li>
             </ol>
+            
+            <AlertBurdenFigure />
           </section>
 
           <hr className="my-12 border-border" />
@@ -147,6 +159,8 @@ const ClinicalCaseStudy = () => {
             <h2 className="font-serif text-3xl font-bold mb-6 tracking-tight">
               Interpretability Methods Encountered — Practical Limitations in This Case
             </h2>
+
+            <PrecisionRecallFigure />
 
             <div className="space-y-8">
               <div>
@@ -188,6 +202,9 @@ const ClinicalCaseStudy = () => {
           {/* Telemetry and Human-Factors */}
           <section className="mb-12">
             <h2 className="font-serif text-3xl font-bold mb-6 tracking-tight">Telemetry and Human‑Factors Findings</h2>
+            
+            <CalibrationFigure />
+            
             <ul className="space-y-3 text-lg leading-relaxed ml-6 list-disc">
               <li><strong>Prospective Calibration Drift:</strong> At the <strong>0.65–0.70</strong> score band, observed event probability during the prior week was ~0.40, driving <strong>alert volume</strong> at the chosen cutoff and contributing to <strong>alert fatigue</strong>.</li>
               <li><strong>Composite Operational Threshold:</strong> The effective trigger depended on model cutoff <strong>and</strong> queue state <strong>and</strong> device status. This <strong>implicit thresholding</strong> was opaque to users, explaining inconsistent alert visibility.</li>
@@ -226,6 +243,9 @@ const ClinicalCaseStudy = () => {
                 The following are <strong>observations</strong>, not design prescriptions or recommendations.
               </p>
             </div>
+            
+            <ProtocolCoverageFigure />
+            
             <ol className="space-y-4 list-decimal list-inside text-lg leading-relaxed">
               <li className="pl-2">
                 <strong>At T+18 (First Positive Score):</strong> A bedside view that cross‑walks the model state to <strong>protocol criteria</strong> (e.g., hypotension + lactate &gt; 2 + suspected source) <strong>and</strong> reveals the alert's <strong>queue position/recipient</strong> could have clarified system intent without advising treatment.
@@ -256,6 +276,9 @@ const ClinicalCaseStudy = () => {
           {/* Key Observations */}
           <section className="mb-12">
             <h2 className="font-serif text-3xl font-bold mb-6 tracking-tight">Key Observations (Non‑Prescriptive)</h2>
+            
+            <ThresholdDecompositionFigure />
+            
             <ol className="space-y-4 list-decimal list-inside text-lg leading-relaxed">
               <li className="pl-2">In time‑critical settings, <strong>interpretability that is not co‑extensive with protocol artifacts</strong> fails to support action, even if it is statistically sound.</li>
               <li className="pl-2">The <strong>effective alert threshold</strong> is socio‑technical (model × queue × device). Lack of visibility into this composite threshold produces perceived inconsistency.</li>
