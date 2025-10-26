@@ -18,6 +18,12 @@ const ClinicalCaseStudy = () => {
             <Link to="/" className="font-serif font-semibold text-xl text-foreground hover:text-primary transition-colors">
               Avyukt
             </Link>
+            <a href="/#publications" className="text-muted-foreground hover:text-primary transition-colors relative group">
+              <span className="relative">
+                Publications
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </a>
             <a href="/#about" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 About
@@ -27,12 +33,6 @@ const ClinicalCaseStudy = () => {
             <a href="/#research" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 Research
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </a>
-            <a href="/#publications" className="text-muted-foreground hover:text-primary transition-colors relative group">
-              <span className="relative">
-                Publications
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </span>
             </a>

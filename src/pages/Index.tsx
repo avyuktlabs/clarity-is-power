@@ -10,6 +10,12 @@ const Index = () => {
             <Link to="/" className="font-serif font-semibold text-xl text-foreground hover:text-primary transition-colors">
               Avyukt
             </Link>
+            <a href="#publications" className="text-muted-foreground hover:text-primary transition-colors relative group">
+              <span className="relative">
+                Publications
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </a>
             <a href="#about" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 About
@@ -19,12 +25,6 @@ const Index = () => {
             <a href="#research" className="text-muted-foreground hover:text-primary transition-colors relative group">
               <span className="relative">
                 Research
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </a>
-            <a href="#publications" className="text-muted-foreground hover:text-primary transition-colors relative group">
-              <span className="relative">
-                Publications
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </span>
             </a>
@@ -61,6 +61,32 @@ const Index = () => {
           <p className="text-sm text-muted-foreground tracking-wide uppercase">
             Est. 15 Aug 2025 • Bangalore
           </p>
+        </section>
+
+        {/* Publications */}
+        <section id="publications" className="py-20 border-t border-border">
+          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
+            Publications & Notes
+          </h2>
+          <div className="space-y-8 max-w-[680px]">
+            <article className="group">
+              <div className="flex items-baseline gap-4 mb-3">
+                <time className="text-sm font-mono text-muted-foreground tracking-wide">
+                  Aug 2025
+                </time>
+                <div className="h-px flex-1 bg-border"></div>
+              </div>
+              <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-primary transition-colors">
+                <Link to="/clinical-case-study" className="hover:underline">
+                  A Critical Case Study of Interpretability in Clinical Systems
+                </Link>
+              </h3>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                An analysis examining the practical limitations of current interpretability methods when applied 
+                to medical decision support systems, with focus on emergency triage scenarios.
+              </p>
+            </article>
+          </div>
         </section>
 
         {/* Mission */}
@@ -132,32 +158,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Publications */}
-        <section id="publications" className="py-20 border-t border-border">
-          <h2 className="font-serif text-4xl font-bold mb-16 tracking-tight">
-            Publications & Notes
-          </h2>
-          <div className="space-y-8 max-w-[680px]">
-            <article className="group">
-              <div className="flex items-baseline gap-4 mb-3">
-                <time className="text-sm font-mono text-muted-foreground tracking-wide">
-                  Aug 2025
-                </time>
-                <div className="h-px flex-1 bg-border"></div>
-              </div>
-              <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-primary transition-colors">
-                <Link to="/clinical-case-study" className="hover:underline">
-                  A Critical Case Study of Interpretability in Clinical Systems
-                </Link>
-              </h3>
-              <p className="text-base leading-relaxed text-muted-foreground">
-                An analysis examining the practical limitations of current interpretability methods when applied 
-                to medical decision support systems, with focus on emergency triage scenarios.
-              </p>
-            </article>
           </div>
         </section>
 
