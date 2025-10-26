@@ -74,7 +74,7 @@ const ClinicalCaseStudy = () => {
           <section className="mb-12">
             <h2 className="font-serif text-3xl font-bold mb-6 tracking-tight">Abstract</h2>
             <p className="text-lg leading-relaxed text-foreground/90">
-              This single‑case observational study reconstructs an emergency department (ED) triage event in which a machine‑learning–based clinical decision support (CDS) alert for sepsis produced an early positive signal that did not translate into timely clinical action. We analyze model telemetry, alert routing, human‑factors context, and post‑hoc explanation artifacts. The objective is <strong>descriptive</strong>: to show how prevailing interpretability methods—feature attributions, saliency overlays, and counterfactuals—behaved in situ, and why their current forms were operationally insufficient for time‑critical care. The study uses terminology consistent with SaMD (software as a medical device), ISO 14971 risk management, and Good Machine Learning Practice (GMLP). We do <strong>not</strong> make recommendations; we document observations of where a real‑time, interpretable agent could have created legibility without prescribing clinical actions.
+              This single‑case observational study reconstructs an emergency department (ED) triage event in which a machine‑learning–based clinical decision support (CDS) alert for sepsis produced an early positive signal that did not translate into timely clinical action. We analyze model telemetry, alert routing, human‑factors context, and post‑hoc explanation artifacts. The objective is <strong>descriptive</strong>: to show how prevailing interpretability methods-feature attributions, saliency overlays, and counterfactuals-behaved in situ, and why their current forms were operationally insufficient for time‑critical care. The study uses terminology consistent with SaMD (software as a medical device), ISO 14971 risk management, and Good Machine Learning Practice (GMLP). We do <strong>not</strong> make recommendations; we document observations of where a real‑time, interpretable agent could have created legibility without prescribing clinical actions.
             </p>
           </section>
 
@@ -87,7 +87,7 @@ const ClinicalCaseStudy = () => {
               <li><strong>Setting:</strong> Urban academic ED during respiratory‑season surge.</li>
               <li><strong>Patient:</strong> Adult male, 58, febrile with hypotension at triage, suspected urinary source.</li>
               <li><strong>System Under Observation:</strong> EHR‑integrated sepsis CDS comprised of (1) a black‑box risk model (gradient‑boosted ensemble), (2) an alerting service with batching and rate‑limits, and (3) dashboards exposing weekly metrics and offline explanation plots (global SHAP, partial dependence).</li>
-              <li><strong>Governance Lens:</strong> Treated internally under SaMD‑like controls—defined intended use; hazard register per ISO 14971; internal post‑market surveillance; ad‑hoc change control for thresholds.</li>
+              <li><strong>Governance Lens:</strong> Treated internally under SaMD‑like controls-defined intended use; hazard register per ISO 14971; internal post‑market surveillance; ad‑hoc change control for thresholds.</li>
             </ul>
           </section>
 
@@ -114,7 +114,7 @@ const ClinicalCaseStudy = () => {
               </div>
             </div>
             <div className="mt-6 bg-primary/10 p-6 rounded border-l-4 border-primary">
-              <p className="text-foreground font-medium"><strong>Index Observation:</strong> The earliest model‑positive state occurred at <strong>T+18</strong>; the first acknowledgment was at <strong>T+37</strong>—a <strong>12‑minute gap</strong> attributable to operational factors (queueing, device states) and limited interpretability at the point of care.</p>
+              <p className="text-foreground font-medium"><strong>Index Observation:</strong> The earliest model‑positive state occurred at <strong>T+18</strong>; the first acknowledgment was at <strong>T+37</strong>- a <strong>12‑minute gap</strong> attributable to operational factors (queueing, device states) and limited interpretability at the point of care.</p>
             </div>
             
             <TimelineFigure />
@@ -153,7 +153,7 @@ const ClinicalCaseStudy = () => {
           {/* Interpretability Methods */}
           <section className="mb-12">
             <h2 className="font-serif text-3xl font-bold mb-6 tracking-tight">
-              Interpretability Methods Encountered — Practical Limitations in This Case
+              Interpretability Methods Encountered - Practical Limitations in This Case
             </h2>
 
             <PrecisionRecallFigure />
@@ -278,8 +278,8 @@ const ClinicalCaseStudy = () => {
             <ol className="space-y-4 list-decimal list-inside text-lg leading-relaxed">
               <li className="pl-2">In time‑critical settings, <strong>interpretability that is not co‑extensive with protocol artifacts</strong> fails to support action, even if it is statistically sound.</li>
               <li className="pl-2">The <strong>effective alert threshold</strong> is socio‑technical (model × queue × device). Lack of visibility into this composite threshold produces perceived inconsistency.</li>
-              <li className="pl-2"><strong>Prospective calibration</strong> at the point of care—and disclosure of current alert burden—modulates trust and attention more than global feature rankings.</li>
-              <li className="pl-2">In this case, a <strong>12‑minute gap</strong> emerged between the first model‑positive state and acknowledgment; interpretability artifacts did not mitigate the gap.</li>
+              <li className="pl-2"><strong>Prospective calibration</strong> at the point of care and disclosure of current alert burden-modulates trust and attention more than global feature rankings.</li>
+              <li className="pl-2">In this case, a <strong>12 minute gap</strong> emerged between the first model‑positive state and acknowledgment; interpretability artifacts did not mitigate the gap.</li>
             </ol>
           </section>
 
